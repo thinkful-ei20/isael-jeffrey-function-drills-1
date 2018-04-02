@@ -1,9 +1,12 @@
 function yearOfBirth(age){
+   if(age < 0)
+    throw new Error("Age can not be negative");
+
     return 2018 - age;
 }
 function whoAmI(name, age) {
   let yob = yearOfBirth(age);
-  console.log('my name is Isael Lizama and I\'m 21 years old');
+  console.log(`'My name is ${name} and I'm ${age} years old`);
   console.log('I was born in ' + yob);
 }
 
